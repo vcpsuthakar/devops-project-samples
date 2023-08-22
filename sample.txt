@@ -1,0 +1,31 @@
+# Lines that start with "#" are comments.
+# Each line maps a pattern to one or more owners.
+
+# Syntax for specifying a single user or team as an owner:
+# <pattern> <username or team>
+
+# Example: A single owner for a specific path
+/docs/* @username
+
+# Syntax for specifying multiple owners:
+# <pattern> <username or team> <username or team>
+
+# Example: Multiple owners for a specific path
+/src/* @user1 @teamA
+
+# Patterns can use glob syntax:
+# * matches any sequence of characters (except '/')
+# ? matches any single character
+# ** matches directories recursively
+
+# Example: Owners for all JavaScript files
+*.js @user2
+
+# Example: Owners for all files in the 'config' directory and its subdirectories
+/config/** @teamB
+
+# You can also use email addresses to specify owners:
+# <pattern> <email>
+
+# Example: Owner specified by email
+/assets/logo.png user@example.com
